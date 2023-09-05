@@ -29,6 +29,11 @@ app.get('/list_user', function (req, res) {
    res.send('Page Listing');
 })
 
+app.get('/', function (req, res) {
+    console.log("Got a GET request for the homepage");
+    const userCount = 10;
+    res.send(`Hello GET. Users are: ${userCount}`);
+ })
 
 // This responds a GET request for abcd, abxcd, ab123cd, and so on
 app.get('/ab*cd', function(req, res) {   
